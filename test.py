@@ -4,6 +4,7 @@ import json
 data = json.load(open("test_credentials.json", "r"))
 
 # Create an application at https://developer.spotify.com/my-applications/#!/applications/create
+# Add http://localhost:4074/ as redirect uri
 
 clientId = data["clientId"]
 clientSecret = data["clientSecret"]
