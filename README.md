@@ -11,10 +11,10 @@ Grant and authorize with
 	auth = oauth2.OAuth2(clientId, clientSecret, authorizationURL, tokenURL)
 	auth.authorize(scopes)
 
-This (if not already and the refresh token has been stored) will open the authorization url and let the user grant access. The code then gets the grant code thanks to a local HTTP server.
+This (if not done already and the refresh token has been stored) will open the authorization url and let the user grant access. The code then gets the grant code thanks to a local HTTP server.
 
-Get the authorization for requests with
+Get the access token for requests with
 
 	auth.getAccessToken()
 
-`getAccessToken()` makes sure the access token hasn't expired, and if it has it will be refreshed
+`getAccessToken()` makes sure the access token hasn't expired, and if it has it will be refreshed and the new token will be returend
